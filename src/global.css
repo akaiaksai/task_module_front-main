@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Kumar+One+Outline&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 12px;
+}
+.no-bounce {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: none;
+  -webkit-transform: translateZ(0px);
+}
+
+/* Дополнительно для body, если нужно отключить bounce на всей странице */
+body {
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+}
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.card {
+  @apply rounded-2xl shadow-sm bg-white;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-2xl px-3 py-2 text-sm font-medium transition active:scale-[.98];
+}
+.btn-primary {
+  @apply btn bg-black text-white hover:bg-neutral-800;
+}
+.btn-ghost {
+  @apply btn bg-transparent hover:bg-neutral-100;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  .container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    /* padding-right: clamp(0.1rem, 2vw, 1rem); */
+    /* padding-left: clamp(0.1rem, 2vw, 1rem); */
+  }
+
+  @media (max-width: 375px) {
+    .container {
+      max-width: 375px;
+    }
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      max-width: 640px;
+    }
+  }
+  @media (min-width: 768px) {
+    .container {
+      max-width: 768px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 1024px;
+    }
+  }
+  @media (min-width: 1280px) {
+    .container {
+      max-width: 1280px;
+    }
+  }
+  @media (min-width: 1536px) {
+    .container {
+      max-width: 1536px;
+    }
+  }
+}
+div::-webkit-scrollbar {
+  display: none;
+}
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: none !important;
+}
+
+.visible-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #000000 transparent;
+}
+
+.visible-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.visible-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.visible-scroll::-webkit-scrollbar-thumb {
+  background: #000000;
+  border-radius: 4px;
+}
+
+@layer utilities {
+  .ui-glow {
+    backdrop-filter: blur(100px);
+    box-shadow:
+      0px 0px 0.92px rgba(0, 0, 0, 0.29),
+      0px 1.83px 1.83px rgba(0, 0, 0, 0.26),
+      0px 3.66px 1.83px rgba(0, 0, 0, 0.15),
+      0px 5.49px 2.75px rgba(0, 0, 0, 0.04),
+      0px 9.15px 2.75px rgba(0, 0, 0, 0.01),
+      0px 0px 20px rgba(51, 193, 231, 0.4);
+  }
+}
+
+@layer utilities {
+  .ui-glow-desktop {
+    backdrop-filter: blur(4px);
+    box-shadow:
+      0px 4px 6.64px rgba(0, 0, 0, 0.32),
+      0px 0px 13px rgba(51, 193, 231, 0.4),
+      0px 0px 11px rgba(51, 193, 231, 0.4);
+  }
+
+  .with-underlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(92, 106, 110, 0.95);
+    border-radius: inherit;
+    z-index: -1;
+  }
+
+  .text-glow-active {
+    text-shadow:
+      0 0 11px rgba(51, 193, 231, 0.4),
+      0 0 13px rgba(51, 193, 231, 0.4);
+  }
+  .bg-dark-glass {
+    background:
+      linear-gradient(180deg, #8ae6ff26 0%, #000000 100%),
+      linear-gradient(0deg, #2b2b2b, #2b2b2b);
+  }
+}
+
+.swiper-wrapper {
+  display: flex !important;
+  flex-direction: row !important;
+}

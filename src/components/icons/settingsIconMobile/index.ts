@@ -1,0 +1,1 @@
+export { SettingsIconMobile } from './SettingsIconMobile';

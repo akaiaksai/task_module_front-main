@@ -1,0 +1,1 @@
+export { VideoCountIcon } from './VideoCountIcon';

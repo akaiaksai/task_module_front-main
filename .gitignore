@@ -1,0 +1,12 @@
+.env
+.env.local
+node_modules
+dist
+.vscode/
+tsconfig.tsbuildinfo
+cloudflared*.log
+ngrok.log
+ngrok*.log
+*ngrok*.log
+tunnel.log
+dev-server*.log

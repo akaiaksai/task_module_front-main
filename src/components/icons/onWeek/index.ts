@@ -1,0 +1,1 @@
+export { OnWeekIcon } from './OnWeekIcon';

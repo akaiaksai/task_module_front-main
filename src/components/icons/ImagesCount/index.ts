@@ -1,0 +1,1 @@
+export { ImagesCountIcon } from './ImagesCountIcon';

@@ -1,0 +1,1 @@
+export { GameChangerLogo } from './GameChangerLogo';

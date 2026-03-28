@@ -1,0 +1,1 @@
+export { XMarkIcon } from './XMarkIcon';
