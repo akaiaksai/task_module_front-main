@@ -12,6 +12,7 @@ const trimSlashes = (value: string) => value.replace(/^\/+|\/+$/g, '');
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
+  const base = stripWrappingQuotes(env.VITE_BASE_PATH || '/');
 
   const apiBase = trimTrailingSlashes(
     stripWrappingQuotes(env.VITE_API_BASE || '')
@@ -28,6 +29,7 @@ export default defineConfig(({ mode }) => {
       : undefined;
 
   return {
+    base,
     plugins: [react(), svgr()],
     build: {
       sourcemap: true,
